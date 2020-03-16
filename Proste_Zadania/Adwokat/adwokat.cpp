@@ -3,7 +3,9 @@ using namespace std;
 
 struct do_dni{
 	int pocz;
+	int pocz_nr;
 	int kon;
+	int kon_nr;
 };
 struct do_tab{
 	int pocz;
@@ -39,16 +41,18 @@ int main(){
 	
 		if (dni[tabsp[i].dzien].pocz < tabsp[i].pocz){
 			dni[tabsp[i].dzien].pocz = tabsp[i].pocz;
+			dni[tabsp[i].dzien].pocz_nr = i;
 		}
 		if(dni[tabsp[i].dzien].kon > tabsp[i].kon){
 			dni[tabsp[i].dzien].kon = tabsp[i].kon;
+			dni[tabsp[i].dzien].kon_nr = i;
 		}
 	
 	}
 	for(int i = 0; i < licz_dni; i++){
 		//cout <<i<<" "<<dni[i].pocz<<" "<<dni[i].kon<<"\n";
-		if (dni[i].pocz >= dni[i].kon){
-			cout <<"TAK"<<"\n";
+		if (dni[i].pocz > dni[i].kon){
+			cout <<"TAK"<<" "<<dni[i].kon_nr + 1<<" "<<dni[i].pocz_nr + 1<<"\n";
 		}
 		else{
 			cout <<"NIE"<<"\n";
