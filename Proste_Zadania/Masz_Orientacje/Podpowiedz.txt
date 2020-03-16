@@ -1,0 +1,8 @@
+Jesli nie masz 100
+uzywasz
+cin 
+cout
+
+dodaj linijke po main
+ios_base::sync_with_stdio(0);
+wtedy zamiast 50pkt bedzie 100
