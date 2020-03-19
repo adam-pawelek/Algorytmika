@@ -1,0 +1,19 @@
+Rozwiazanie zadania:
+Popatrz na kolejne wyniki out
+
+out1
+out2
+out3
+out4
+.......
+itd
+
+Zauwazysz ze wynik kazdej liczby to wynik 2 poprzednich.
+tzn
+out5 = out4 + out3
+8    =  5   +   3
+
+czyli wzor bedzie
+
+out[i] = out[i-1] + out[i-2]
+
